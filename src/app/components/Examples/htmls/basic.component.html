@@ -1,0 +1,41 @@
+<h2>Basic Tree Grid</h2>
+<button (click)="collapseAll()">Collapse All</button><button (click)="expandAll()">Expand All</button>
+<p></p>
+<db-angular-tree-grid #angularGrid [data]="data" [configs]="configs"></db-angular-tree-grid>
+<p>This is a very basic grid. You provide an array and a configuration.</p>
+<h3>Data</h3>
+<p>Below is an example of a source</p>
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"{id: 1, name: 'Bimal', age: 60, weight: 60, gender: 1, phone: 7930343463, parent: 0}"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"{id: 2, name: 'Bhagi', age: 40, weight: 95, gender: 1, phone: 7930343463, parent: 1}"}}</code></span>
+</pre>
+<h3>Configuration</h3>
+<span class="code">id_field</span> and <span class="code">parent_id_field</span> are mandatory.
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"configs: {"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>   id_field: 'id'</code></span>
+    <span class="tr"><span class="th"></span><code>   parent_id_field: 'parent'</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"}"}}</code></span>
+</pre>
+<h3>Column</h3>
+<span class="code">name</span> is mandatory. It is the key in Data.
+<pre class="code">
+    <span class="tr e first-row"><span class="th"></span><code>{{"{"}}</code></span>
+    <span class="tr"><span class="th"></span><code>   name: 'name'</code></span>
+    <span class="tr e"><span class="th"></span><code>   header: 'Name'</code></span>
+    <span class="tr"><span class="th"></span><code>   width: '100px'</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"}"}}</code></span>
+</pre>
+<p>For customized value, <span class="code">renderer</span> function can be used(See below). Or you can use Custom View Component
+    altogether.</p>
+
+<h3>Renderer</h3>
+<p>This is a good place to customize the cell value.</p>
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"renderer: function(value) {"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"    return value + ' years';"}}</code></span>
+    <span class="tr"><span class="th"></span><code>{{"}"}}</code></span>
+</pre>
+<br>
+<div style="margin: 20px 0 0 0;">Please check the Full code below.</div>
+<iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 10px 0 0 0;border:0"></iframe>

@@ -1,0 +1,28 @@
+<h2>Angular Subgrid Component</h2>
+<db-angular-tree-grid (expand)="onExpand($event)" [data]="data" [configs]="configs">
+</db-angular-tree-grid>
+<p>
+    Basically on expand of the row, Child-rows will be loaded to the grid. An Ajax can be called for the same. 
+    Rows will be added only when resolve is called by passing child rows as an argument on expand event. <br>
+</p>
+<h3>SubGrid</h3>
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"configs: any = {"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"   subgrid: true,"}}</code></span>
+    <span class="tr"><span class="th"></span><code>{{"   subgrid_config: {"}}</code></span>
+<span class="tr e"><span class="th"></span><code>{{"        id_field: 'technology_id',"}}</code></span>
+<span class="tr"><span class="th"></span><code>{{"        show_summary_row: true,"}}</code></span>
+<span class="tr e"><span class="th"></span><code>{{"        columns: [],"}}</code></span>
+<span class="tr"><span class="th"></span><code>{{"    }"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"}"}}</code></span>
+</pre>
+<h3>Resolve Subgrid Data</h3>
+Call resolve function after getting the data from Ajax call.
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"e.resolve(this.subgrid_1);"}}</code></span>
+</pre>
+<p>
+    <b>Note:</b> Add fearture is disabled for Subgrid for now.
+</p>
+<div style="margin: 20px 0 0 0;">Please check the Full code below.</div>
+<iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 10px 0 0 0;border:0"></iframe>

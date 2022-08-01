@@ -1,0 +1,28 @@
+<h2>Filter Component</h2>
+<button (click)="collapseAll()">Collapse All</button><button (click)="expandAll()">Expand All</button>
+<p></p>
+<db-angular-tree-grid #angularGrid [data]="data" [configs]="configs">
+</db-angular-tree-grid>
+
+<h3>Config</h3>
+<p>
+    Enable filter at the grid level to enable filter toolbar. Filter can be disabled at the column level as well.
+</p>
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"configs: any = {"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"    filter: true,"}}</code></span>
+    <span class="tr "><span class="th"></span><code>{{"}"}}</code></span>
+</pre>
+<h3>Config</h3>
+<p>
+    A <b>custom</b> filter function can be assigned to <span class="code">filter_function</span>.
+</p>
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"filter_function: function(row_data, column, column_value, filter_value) {"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"    return column_value > filter_value;"}}</code></span>
+    <span class="tr "><span class="th"></span><code>{{"}"}}</code></span>
+</pre>
+<p>See weight column below.
+    It gets Row data, column configuration, column value and filter value as arguments.</p>
+<div style="margin: 20px 0 0 0;">Please check the Full code below.</div>
+<iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 10px 0 0 0;border:0"></iframe>

@@ -1,0 +1,25 @@
+<h2>Dynamic Children Component</h2>
+<button (click)="collapseAll()">Collapse All</button><button (click)="expandAll()">Expand All</button>
+<p></p>
+<db-angular-tree-grid #angularGrid (expand)="onExpand($event)" [data]="data" [configs]="configs">
+</db-angular-tree-grid>
+<h3>Config</h3>
+<p>
+    Children can be loaded dynamically. Let's suppose we want to load children on expand.
+    Then set <span class="code">load_children_on_expand</span> to true and listen to the 
+    <span class="code">expand</span> event. See Below.
+</p>
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"configs: any = {"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"   load_children_on_expand: true,"}}</code></span>
+    <span class="tr "><span class="th"></span><code>{{"}"}}</code></span>
+</pre>
+<h3>Leaf Node</h3>
+<p>
+    A child can be treated as a leaf node(won't have expand icon) if <b>leaf_node</b> is set to true in the object. See below.
+</p>
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"e.resolve([{ id: 4, name: 'Ashok', age: 60, weight: 60, gender: 1, phone: 7930343463, node_leaf: true}])"}}</code></span>
+</pre>
+<div style="margin: 20px 0 0 0;">Please check the Full code below.</div>
+<iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 10px 0 0 0;border:0"></iframe>

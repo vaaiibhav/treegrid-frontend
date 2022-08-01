@@ -1,0 +1,15 @@
+<h2>Summary Row</h2>
+<db-angular-tree-grid [data]="data" [configs]="configs"></db-angular-tree-grid>
+<p>Set <span class="code">show_summary_row</span> to true at the grid level and use
+    <span class="code">summary_renderer</span> at the column level.
+</p>
+
+<h3>Summary Renderer</h3>
+<p><span class="code">summary_renderer</span>gets the whole data array as an argument.</p>
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"summary_renderer: (data) => {"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"    return data.map(rec => rec.weight).reduce((a, b) => a + b, 0);"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"}"}}</code></span>
+</pre>
+<div style="margin: 20px 0 0 0;">Please check the Full code below.</div>
+<iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 10px 0 0 0;border:0"></iframe>

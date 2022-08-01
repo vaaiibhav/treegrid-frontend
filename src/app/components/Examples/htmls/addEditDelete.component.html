@@ -1,0 +1,41 @@
+<h2>With Add, Edit and Delete Option</h2>
+<db-angular-tree-grid [data]="data" [configs]="edit_configs" (add)="onAdd($event)"></db-angular-tree-grid>
+<p>This is a basic tree grid with add, edit and delete features.</p>
+
+<h3>CSS</h3>
+Icon class for Expand, Collapse, Edit, Cancel, Delete and Add can be given under css property of the Grid. 
+Meaning Icons can be customized by setting a css class. Please check below.
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"css: { "}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"    expand_class: 'fa fa-caret-right',"}}</code></span>
+    <span class="tr "><span class="th"></span><code>{{"    collapse_class: 'fa fa-caret-down',"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"    edit_class: 'fa fa-pencil',"}}</code></span>
+    <span class="tr "><span class="th"></span><code>{{"    delete_class: 'fa fa-trash',"}}</code></span>
+    <span class="tr "><span class="th"></span><code>{{"    save_class: 'fa fa-save',"}}</code></span>
+    <span class="tr "><span class="th"></span><code>{{"    cancel_class: 'fa fa-remove',"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"}"}}</code></span>
+</pre>
+
+<h3>Actions</h3>
+Below Configuration needs to be enabled.
+<p> If Parent of records needs to be changed while editing then set <span class="code">edit_parent</span> to true. </p>
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"actions: {"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"    add: true,"}}</code></span>
+    <span class="tr "><span class="th"></span><code>{{"    edit: true,"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"    delete: true,"}}</code></span>
+    <span class="tr "><span class="th"></span><code>{{"    edit_parent: true,"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"}"}}</code></span>
+</pre>
+
+<h3>Column Editable</h3>
+<p>By default all columns are editable if edit set to true at the Grid level. However it can be managed at the column
+level through <span class="code">editable</span>.</p>
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"editable: true"}}</code></span>
+</pre>
+
+<div style="margin: 20px 0 0 0;">Please check the Full code below.</div>
+
+<iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 10px 0 0 0;border:0">
+</iframe>

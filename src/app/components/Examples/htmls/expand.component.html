@@ -1,0 +1,20 @@
+<h2>Specific Row Expand/Collapse</h2>
+<button (click)="collapseRow(6)">Collapse Sunil</button>
+<button (click)="expandRow(1)">Expand Bimal</button>
+<p></p>
+<db-angular-tree-grid #angularGrid [data]="data" [configs]="configs"></db-angular-tree-grid>
+<p>Sometimes we may need to expand or Collapse a specific Row in the grid programatically. We can do that by using below methods.</p>
+<h3>Expand</h3>
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"expandRow(id) {"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"   this.angularGrid.expandRow(id);"}}</code></span>
+    <span class="tr "><span class="th"></span><code>{{"}"}}</code></span>
+</pre>
+<h3>Collapse</h3>
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"collapseRow(id) {"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"   this.angularGrid.collapseRow(id);"}}</code></span>
+    <span class="tr "><span class="th"></span><code>{{"}"}}</code></span>
+</pre>
+<div style="margin: 20px 0 0 0;">Please check the Full code below.</div>
+<iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 10px 0 0 0;border:0"></iframe>

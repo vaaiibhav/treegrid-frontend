@@ -1,0 +1,18 @@
+<h2>Selection Component</h2>
+<button (click)="selectAll()">Select All</button><button (click)="deSelectAll()">DeSelect All</button>
+<p></p>
+<db-angular-tree-grid #angularGrid [data]="data" [configs]="configs">
+</db-angular-tree-grid>
+<h3>Multi Select</h3>
+<p>
+    Set <span class="code">multi_select</span> property at the grid level to enable this feature. 
+    Then  checkboxes can be seen in every row. All rows can be selected/deselected by the check all checkbox.
+</p>
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"configs: any = {"}}</code></span>
+    <span class="tr e"><span class="th"></span><code>{{"    multi_select: true,"}}</code></span>
+    <span class="tr "><span class="th"></span><code>{{"}"}}</code></span>
+</pre>
+
+<div style="margin: 20px 0 0 0;">Please check the Full code below.</div>
+<iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 10px 0 0 0;border:0"></iframe>

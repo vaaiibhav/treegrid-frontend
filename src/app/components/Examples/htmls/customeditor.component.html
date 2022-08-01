@@ -1,0 +1,16 @@
+<h2>Custom Editor Component</h2>
+<db-angular-tree-grid [data]="data" [configs]="configs"></db-angular-tree-grid>
+
+<h3>Custom Editor Component</h3>
+<p>Custom Editor can be set in the <span class="code">editor</span> config of the column.</p>
+<pre class="code">
+    <span class="tr first-row"><span class="th"></span><code>{{"{"}}</code></span>
+    <span class="tr e"><span class="th e"></span><code>{{"    editor: AgeComponent"}}</code></span>
+    <span class="tr"><span class="th"></span><code>{{"}"}}</code></span>
+</pre>
+<p> Please check below how to create a cusotm Editor component.
+    This Component needs to be extended from
+    <b>DefaultEditor</b> and need to be added to the <b>entryComponents</b> of the module.
+</p>
+<div style="margin: 20px 0 0 0;">Please check the Full code below.</div>
+<iframe #iframe type="text/javascript" width="100%" height="400px" style="margin: 10px 0 0 0;border:0"></iframe>
