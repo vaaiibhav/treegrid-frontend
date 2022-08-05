@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-container',
+  // specifies the template string for the TreeGrid component
+  template: `<ejs-treegrid> </ejs-treegrid>`
 })
-export class AppComponent {
-  title = 'treegrid-frontend';
+export class AppComponent implements OnInit {
+
+ngOnInit(): void {
+}
 }

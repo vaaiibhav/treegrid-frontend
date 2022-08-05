@@ -1,18 +1,14 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+// import the TreeGridModule for the TreeGrid component
+import { TreeGridModule } from '@syncfusion/ej2-angular-treegrid';
+import { AppComponent }  from './app.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  //declaration of ej2-angular-treegrid module into NgModule
+  imports:      [ BrowserModule, TreeGridModule ],
+  declarations: [ AppComponent ],
+  bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
